@@ -1,0 +1,17 @@
+# Add/remove 'critical' label if issue contains the words 'urgent' or 'critical'
+critical:
+  - '\*crit'
+high:
+  - '\*high'
+medium:
+  - '\*med'
+low:
+  - '\*low'
+
+# Add/remove 'app type' label
+decor:
+  - '\*decor'
+pdi:
+  - '\*pdi'
+mobile:
+  - '\*mobile'
