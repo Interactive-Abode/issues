@@ -1,0 +1,72 @@
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      multiple: false
+      options:
+        - Critical! (*crit)
+        - Important (*high)
+        - Soon (*med)
+        - When you have time (*low)
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: input
+    id: project
+    attributes:
+      label: Project ID
+      description: What is the project ID or URL of the project?
+      placeholder: ex. sudburydev.interactiveabode.com
+    validations:
+      required: true
+  - type: dropdown
+    id: app
+    attributes:
+      label: Which application is this happening in?
+      multiple: true
+      options:
+        - Decor (*decor)
+        - PDI/Warranty (*pdi)
+        - Mobile App (*mobile)
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Relevant screenshots
+      description: Please copy and paste any relevant screenshots
